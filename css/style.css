@@ -648,8 +648,11 @@ button {
   margin: 18px 0 3.9em 0;
   list-style: none;
   padding: 0;
+  position: relative;
+  height: 238px;
+  width: 100%;
 }
-/* line 177, ../src/style.scss */
+/* line 180, ../src/style.scss */
 #slide-show .question {
   padding-left: 80px;
   display: inline;
@@ -661,11 +664,17 @@ button {
 * html #slide-show .question {
   overflow-x: hidden;
 }
-/* line 180, ../src/style.scss */
-#slide-show .question img {
-  float: left;
-}
 /* line 183, ../src/style.scss */
+#slide-show .question img {
+  max-height: 239px;
+}
+/* line 187, ../src/style.scss */
+#slide-show .question .monkey {
+  float: left;
+  width: 147px;
+  margin-left: -30px;
+}
+/* line 192, ../src/style.scss */
 #slide-show .question h3, #slide-show .question .answer p, #slide-show .answer .question p {
   display: inline;
   float: left;
@@ -675,8 +684,7 @@ button {
   font-size: 2.571em;
   color: #fff;
   text-shadow: #000 2px 2px 0px;
-  position: relative;
-  top: 30px;
+  margin-top: 30px;
   background: url('../img/slide-dialog.png?1288837910') no-repeat;
   width: 360px;
   height: 153px;
@@ -686,12 +694,12 @@ button {
 * html #slide-show .question h3, * html #slide-show .question .answer p, * html #slide-show .answer .question p {
   overflow-x: hidden;
 }
-/* line 195, ../src/style.scss */
+/* line 203, ../src/style.scss */
 #slide-show .question h3 span, #slide-show .question .answer p span, #slide-show .answer .question p span {
   display: block;
   padding: 10px 6px 9px 60px;
 }
-/* line 201, ../src/style.scss */
+/* line 209, ../src/style.scss */
 #slide-show .answer {
   display: inline;
   float: left;
@@ -699,20 +707,23 @@ button {
   width: 230px;
   padding-right: 40px;
   padding-left: 40px;
-  position: relative;
-  top: 48px;
+  margin-top: 48px;
 }
 /* line 139, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #slide-show .answer {
   overflow-x: hidden;
 }
-/* line 207, ../src/style.scss */
+/* line 214, ../src/style.scss */
 #slide-show .answer p {
   font-size: 1.714em;
   color: #a0d188;
   text-shadow: #264119 1px 1px 0px;
 }
-/* line 213, ../src/style.scss */
+/* line 220, ../src/style.scss */
+#slide-show .answer small {
+  font-size: 60%;
+}
+/* line 223, ../src/style.scss */
 #slide-show .answer .btn {
   padding: 10px;
   background: #063029;
@@ -726,7 +737,7 @@ button {
   border-radius: 5px;
   -moz-box-shadow: black 2px 2px 0px;
 }
-/* line 220, ../src/style.scss */
+/* line 230, ../src/style.scss */
 #slide-show .answer .btn:hover {
   -moz-box-shadow: none;
   position: relative;
@@ -734,42 +745,91 @@ button {
   top: 2px;
   left: 2px;
 }
-/* line 229, ../src/style.scss */
+/* line 239, ../src/style.scss */
 #slide-show li {
   display: none;
-  height: 238px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-/* line 234, ../src/style.scss */
-#slide-show li:first-child {
-  display: block;
+/* line 247, ../src/style.scss */
+#slide-show #website-features {
   border-top: #252a3b solid 5px;
   border-bottom: #252a3b solid 5px;
   background: url('../img/pre-header-texture.png?1288841218') repeat;
   background-color: #0c6254;
 }
 /* line 155, ../src/style.scss */
-#slide-show li:first-child .wrap {
+#slide-show #website-features .wrap {
   background: -moz-radial-gradient(180px 50%, circle, rgba(126, 239, 221, 0.5), rgba(12, 98, 84, 0) 180px);
 }
 /* line 160, ../src/style.scss */
-#slide-show li:first-child .answer p {
+#slide-show #website-features .answer p {
   color: #7eefdd;
 }
 /* line 163, ../src/style.scss */
-#slide-show li:first-child .answer .btn {
+#slide-show #website-features .answer .btn {
   background: rgba(0, 0, 0, 0.5);
 }
 /* line 166, ../src/style.scss */
-#slide-show li:first-child .answer .btn:hover {
+#slide-show #website-features .answer .btn:hover {
   background: rgba(1, 7, 6, 0.5);
 }
+/* line 250, ../src/style.scss */
+#slide-show #website-identity {
+  border-top: #252a3b solid 5px;
+  border-bottom: #252a3b solid 5px;
+  background: url('../img/pre-header-texture.png?1288841218') repeat;
+  background-color: #698959;
+}
+/* line 155, ../src/style.scss */
+#slide-show #website-identity .wrap {
+  background: -moz-radial-gradient(180px 50%, circle, rgba(239, 244, 237, 0.5), rgba(105, 137, 89, 0) 180px);
+}
+/* line 160, ../src/style.scss */
+#slide-show #website-identity .answer p {
+  color: #eff4ed;
+}
+/* line 163, ../src/style.scss */
+#slide-show #website-identity .answer .btn {
+  background: rgba(34, 44, 29, 0.5);
+}
+/* line 166, ../src/style.scss */
+#slide-show #website-identity .answer .btn:hover {
+  background: rgba(58, 75, 49, 0.5);
+}
+/* line 253, ../src/style.scss */
+#slide-show #website-performance {
+  display: block;
+  border-top: #252a3b solid 5px;
+  border-bottom: #252a3b solid 5px;
+  background: url('../img/pre-header-texture.png?1288841218') repeat;
+  background-color: #9d201e;
+}
+/* line 155, ../src/style.scss */
+#slide-show #website-performance .wrap {
+  background: -moz-radial-gradient(180px 50%, circle, rgba(244, 199, 198, 0.5), rgba(157, 32, 30, 0) 180px);
+}
+/* line 160, ../src/style.scss */
+#slide-show #website-performance .answer p {
+  color: #f4c7c6;
+}
+/* line 163, ../src/style.scss */
+#slide-show #website-performance .answer .btn {
+  background: rgba(29, 6, 5, 0.5);
+}
+/* line 166, ../src/style.scss */
+#slide-show #website-performance .answer .btn:hover {
+  background: rgba(71, 15, 14, 0.5);
+}
 
-/* line 239, ../src/style.scss */
+/* line 259, ../src/style.scss */
 #slide-nav-wrap {
   position: relative;
   overflow: visible;
 }
-/* line 242, ../src/style.scss */
+/* line 262, ../src/style.scss */
 #slide-nav-wrap #slide-nav {
   position: absolute;
   top: -200px;
@@ -777,7 +837,7 @@ button {
   width: 100%;
   overflow: visible;
 }
-/* line 249, ../src/style.scss */
+/* line 269, ../src/style.scss */
 #slide-nav-wrap a {
   background: url('../img/prev-next-arrows.png?1288839464') no-repeat;
   height: 42px;
@@ -785,31 +845,31 @@ button {
   text-indent: -5555em;
   opacity: 0.5;
 }
-/* line 255, ../src/style.scss */
+/* line 275, ../src/style.scss */
 #slide-nav-wrap a:hover {
   opacity: 1;
   position: relative;
 }
-/* line 260, ../src/style.scss */
+/* line 280, ../src/style.scss */
 #slide-nav-wrap .prev {
   float: left;
   background-position: 0 0;
 }
-/* line 263, ../src/style.scss */
+/* line 283, ../src/style.scss */
 #slide-nav-wrap .prev:hover {
   left: -2px;
 }
-/* line 267, ../src/style.scss */
+/* line 287, ../src/style.scss */
 #slide-nav-wrap .next {
   float: right;
   background-position: -40px 0;
 }
-/* line 270, ../src/style.scss */
+/* line 290, ../src/style.scss */
 #slide-nav-wrap .next:hover {
   left: 2px;
 }
 
-/* line 275, ../src/style.scss */
+/* line 295, ../src/style.scss */
 #footer {
   border-top: #425f5b solid 5px;
   background: #1a2031;
@@ -817,13 +877,13 @@ button {
   padding: 1.3em 0;
   margin-top: 3.9em;
 }
-/* line 281, ../src/style.scss */
+/* line 301, ../src/style.scss */
 #footer h3, #footer #slide-show .answer p, #slide-show .answer #footer p {
   color: #a0d188;
   font-size: 1.7em;
 }
 
-/* line 286, ../src/style.scss */
+/* line 306, ../src/style.scss */
 #about {
   display: inline;
   float: left;
@@ -844,7 +904,7 @@ button {
   overflow-x: hidden;
 }
 
-/* line 293, ../src/style.scss */
+/* line 313, ../src/style.scss */
 #contact {
   display: inline;
   float: left;
@@ -857,7 +917,7 @@ button {
 * html #contact {
   overflow-x: hidden;
 }
-/* line 297, ../src/style.scss */
+/* line 317, ../src/style.scss */
 #contact label {
   color: inherit;
   display: block;
@@ -866,12 +926,12 @@ button {
   margin-bottom: 5px;
   font-size: 1.3em;
 }
-/* line 307, ../src/style.scss */
+/* line 327, ../src/style.scss */
 #contact .for-text,
 #contact .for-textarea {
   margin-bottom: 1.3em;
 }
-/* line 309, ../src/style.scss */
+/* line 329, ../src/style.scss */
 #contact .for-text input, #contact .for-text textarea,
 #contact .for-textarea input,
 #contact .for-textarea textarea {
@@ -887,13 +947,13 @@ button {
   padding: 7px;
   cursor: pointer;
 }
-/* line 318, ../src/style.scss */
+/* line 338, ../src/style.scss */
 #contact .for-submit {
   text-align: right;
   padding-right: 15px;
   margin-bottom: 10px;
 }
-/* line 321, ../src/style.scss */
+/* line 341, ../src/style.scss */
 #contact .for-submit input {
   background: #ee302e;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ea2f2d), color-stop(100%, #971f1e));
@@ -916,7 +976,7 @@ button {
   box-shadow: black 3px 3px 0 0;
   cursor: pointer;
 }
-/* line 333, ../src/style.scss */
+/* line 353, ../src/style.scss */
 #contact .for-submit input:hover {
   background: #ea2f2d;
   position: relative;
@@ -925,7 +985,7 @@ button {
   -moz-box-shadow: none;
 }
 
-/* line 344, ../src/style.scss */
+/* line 364, ../src/style.scss */
 #contact-info {
   display: inline;
   float: left;
@@ -946,46 +1006,46 @@ button {
 }
 
 @media print {
-  /* line 374, ../src/style.scss */
+  /* line 394, ../src/style.scss */
   * {
     background: transparent !important;
     color: #444 !important;
     text-shadow: none !important;
   }
 
-  /* line 375, ../src/style.scss */
+  /* line 395, ../src/style.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
 
-  /* line 376, ../src/style.scss */
+  /* line 396, ../src/style.scss */
   a:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 377, ../src/style.scss */
+  /* line 397, ../src/style.scss */
   abbr:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 378, ../src/style.scss */
+  /* line 398, ../src/style.scss */
   .ir a:after {
     content: "";
   }
 
-  /* line 379, ../src/style.scss */
+  /* line 399, ../src/style.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 380, ../src/style.scss */
+  /* line 400, ../src/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 381, ../src/style.scss */
+  /* line 401, ../src/style.scss */
   tr, img {
     page-break-inside: avoid;
   }
@@ -994,13 +1054,13 @@ button {
     margin: 0.5cm;
 }
 
-  /* line 383, ../src/style.scss */
+  /* line 403, ../src/style.scss */
   p, h2, h3, #slide-show .answer p {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 384, ../src/style.scss */
+  /* line 404, ../src/style.scss */
   h2, h3, #slide-show .answer p {
     page-break-after: avoid;
   }

@@ -174,11 +174,20 @@ form {
 	margin:18px 0 3.9em 0;
 	list-style:none;
 	padding:0;
+	position:relative;
+	height:238px;
+	width:100%;
 	.question{
 		@include prepend(2);
 		@include column(14);
 		img{
+			//max-width:147px;
+			max-height:239px;
+		}
+		.monkey{
 			float:left;
+			width:147px;
+			margin-left:-30px;
 		}
 		h3{
 			@include column(8);
@@ -186,8 +195,7 @@ form {
 			font-size:2.571em;
 			color:#fff;
 			text-shadow:#000 2px 2px 0px;
-			position:relative;
-			top:30px;
+			margin-top:30px;
 			background:image-url('slide-dialog.png') no-repeat;
 			width:360px;
 			height:153px;
@@ -202,13 +210,15 @@ form {
 		@include column(6,true);
 		@include append(1);
 		@include prepend(1);
-		position:relative;
-		top:48px;
+		margin-top:48px;
 		p{
 			@extend h3;
 			font-size:1.714em;
 			color:#a0d188;
 			text-shadow:darken(#a0d188,50%) 1px 1px 0px;
+		}
+		small{
+			font-size:60%;
 		}
 		.btn{
 			padding:10px;
@@ -229,12 +239,22 @@ form {
 	li{
 		@extend .group;
 		display:none;
-		height:238px;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
 	}
-	li:first-child{
-		display:block;
+	#website-features{
 		@include slide(#0c6254);
 	}
+	#website-identity{
+		@include slide(#698959);
+	}
+	#website-performance{
+		display:block;
+		@include slide(#9d201e);
+	}
+	
 }
 #slide-nav-wrap{
 	position:relative;

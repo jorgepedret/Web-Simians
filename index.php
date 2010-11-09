@@ -34,6 +34,7 @@
 				<li class="home-item"><a href="#">Home</a></li>
 				<li class="services-item"><a href="#">Services</a></li>
 				<li class="portfolio-item"><a href="#">Portfolio</a></li>
+				<li class="blog-item"><a href="#">Blog</a></li>
 				<li class="contact-item"><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
@@ -41,10 +42,26 @@
 </header>
 <section id="post-header">
 	<ul id="slide-show">
-		<li>
+		<li id="website-performance">
 			<div class="wrap">
 				<div class="question">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/hmmm2.png" alt="Monkey handstand talking on phone" height="240" />
+					<div class="monkey">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/monkeys-wip.png" alt="Happy Monkey" />
+					</div>
+					<h3><span>Do you know how your website is doing?</span></h3>
+				</div>
+				<div class="answer">
+					<p>We get into your user&rsquo;s head <br /><small>(Like we&rsquo;re getting in yours now)</small></p>
+					<a href="#" class="btn">Find out how &raquo;</a>
+				</div>
+			</div>
+		</li>
+		<li id="website-features">
+			<div class="wrap">
+				<div class="question">
+					<div class="monkey">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/hmmm2.png" alt="Monkey handstand talking on phone" />
+					</div>
 					<h3><span>What is your website doing for your business?</span></h3>
 				</div>
 				<div class="answer">
@@ -53,27 +70,17 @@
 				</div>
 			</div>
 		</li>
-		<li>
+		<li id="website-identity">
 			<div class="wrap">
 				<div class="question">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/happy-sad-monkey2.png" alt="Half Bum Monkey Half Business Monkey" />
-					<h3>Does your website reflects your business identity?</h3>
+					<div class="monkey">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/happy-sad-monkey2.png" alt="Half Bum Monkey Half Business Monkey" />
+					</div>
+					<h3><span>Does your website reflects your business identity?</span></h3>
 				</div>
 				<div class="answer">
 					<p>We help you understand your business potential</p>
 					<a href="#" class="btn">Check out our services &raquo;</a>
-				</div>
-			</div>
-		</li>
-		<li>
-			<div class="wrap">
-				<div class="question">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/monkeys-wip.png" alt="Happy Monkey" />
-					<h3>Do you know how your website is doing?</h3>
-				</div>
-				<div class="answer">
-					<p>We get into your user&rsquo;s head <br /><small>(Like we&rsquo;re getting in yours now)</small></p>
-					<a href="#" class="btn">Find out how &raquo;</a>
 				</div>
 			</div>
 		</li>
@@ -191,6 +198,53 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js"></script>
 <!-- end concatenated and minified scripts-->
+<script>
+$(function(){
+	$('#slide-nav-wrap a').css('outline','none');
+	$('#slide-nav-wrap .prev').click(function(){
+		PrevSlide();
+	});
+	$('#slide-nav-wrap .next').click(function(){
+		NextSlide();
+	});
+	
+	var current_slide = 0;
+	
+	function goToSlide(slide){
+		
+		if(slide != 'next' && slide != 'prev'){
+			if($('#slide-show li:eq('+slide+')').length > 0){
+				//$('#slide-show li:eq('+slide+')').css('display','block');
+				$('#slide-show li:eq('+slide+')').slideDown();
+				//$('#slide-show li:eq('+current_slide+')').css('display','none');
+				$('#slide-show li:eq('+current_slide+')').slideUp();
+				current_slide = slide;
+			}
+		}
+		
+		if(slide == 'next'){
+			if($('#slide-show li:eq('+(current_slide+1)+')').length > 0){
+				goToSlide(current_slide+1);
+			} else {
+				goToSlide(0);
+			}
+		}
+		if(slide == 'prev'){
+			if($('#slide-show li:eq('+(current_slide-1)+')').length > 0){
+				goToSlide(current_slide-1);
+			} else {
+				goToSlide($('#slide-show li').length - 1);
+			}
+		}
+	}
+	function PrevSlide(){
+		goToSlide('prev');
+	}
+	function NextSlide(){
+		goToSlide('next');
+	}
+});
+</script>
 
 <!--[if lt IE 7 ]>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/dd_belatedpng.js"></script>
