@@ -94,7 +94,7 @@
 </section>
 <article id="main">
 	<div class="wrap">
-		<section id="featured-projects">
+		<section id="featured-projects" class="group">
 			<h2>Featured Projects</h2>
 			<article class="project">
 				<h3><a href="#">Vehicle Direct</a></h3>

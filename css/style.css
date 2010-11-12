@@ -595,7 +595,7 @@ button {
   display: block;
   height: 77px;
   width: 187px;
-  background: url('../img/web-simians-logo.png?1288776053') no-repeat;
+  background: url('../img/web-simians-logo.png?1289531769') no-repeat;
 }
 /* line 115, ../src/style.scss */
 #branding a:hover {
@@ -685,7 +685,7 @@ button {
   color: #fff;
   text-shadow: #000 2px 2px 0px;
   margin-top: 30px;
-  background: url('../img/slide-dialog.png?1288837910') no-repeat;
+  background: url('../img/slide-dialog.png?1289531769') no-repeat;
   width: 360px;
   height: 153px;
   line-height: 1.2em;
@@ -757,7 +757,7 @@ button {
 #slide-show #website-features {
   border-top: #252a3b solid 5px;
   border-bottom: #252a3b solid 5px;
-  background: url('../img/pre-header-texture.png?1288841218') repeat;
+  background: url('../img/pre-header-texture.png?1289531769') repeat;
   background-color: #0c6254;
 }
 /* line 155, ../src/style.scss */
@@ -780,7 +780,7 @@ button {
 #slide-show #website-identity {
   border-top: #252a3b solid 5px;
   border-bottom: #252a3b solid 5px;
-  background: url('../img/pre-header-texture.png?1288841218') repeat;
+  background: url('../img/pre-header-texture.png?1289531769') repeat;
   background-color: #698959;
 }
 /* line 155, ../src/style.scss */
@@ -804,7 +804,7 @@ button {
   display: block;
   border-top: #252a3b solid 5px;
   border-bottom: #252a3b solid 5px;
-  background: url('../img/pre-header-texture.png?1288841218') repeat;
+  background: url('../img/pre-header-texture.png?1289531769') repeat;
   background-color: #9d201e;
 }
 /* line 155, ../src/style.scss */
@@ -839,7 +839,7 @@ button {
 }
 /* line 269, ../src/style.scss */
 #slide-nav-wrap a {
-  background: url('../img/prev-next-arrows.png?1288839464') no-repeat;
+  background: url('../img/prev-next-arrows.png?1289531769') no-repeat;
   height: 42px;
   width: 40px;
   text-indent: -5555em;
@@ -999,6 +999,44 @@ button {
   overflow-x: hidden;
 }
 
+/* line 370, ../src/style.scss */
+.project {
+  float: left;
+  margin-right: 55px;
+  width: 280px;
+}
+/* line 374, ../src/style.scss */
+.project h3, .project #slide-show .answer p, #slide-show .answer .project p {
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+/* line 378, ../src/style.scss */
+.project p {
+  margin: 0;
+}
+/* line 381, ../src/style.scss */
+.project figure {
+  margin-top: 15px;
+  border: 5px solid black;
+  padding: 3px 3px 0;
+}
+
+/* line 388, ../src/style.scss */
+#blog-entries {
+  margin: 30px 0 0 0;
+}
+
+/* line 391, ../src/style.scss */
+.post {
+  width: 270px;
+  float: left;
+  margin-right: 65px;
+}
+/* line 395, ../src/style.scss */
+.post h3, .post #slide-show .answer p, #slide-show .answer .post p {
+  line-height: 1.2em;
+}
+
 @media all and (orientation:portrait) {}
 @media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {
@@ -1006,46 +1044,46 @@ button {
 }
 
 @media print {
-  /* line 394, ../src/style.scss */
+  /* line 420, ../src/style.scss */
   * {
     background: transparent !important;
     color: #444 !important;
     text-shadow: none !important;
   }
 
-  /* line 395, ../src/style.scss */
+  /* line 421, ../src/style.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
 
-  /* line 396, ../src/style.scss */
+  /* line 422, ../src/style.scss */
   a:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 397, ../src/style.scss */
+  /* line 423, ../src/style.scss */
   abbr:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 398, ../src/style.scss */
+  /* line 424, ../src/style.scss */
   .ir a:after {
     content: "";
   }
 
-  /* line 399, ../src/style.scss */
+  /* line 425, ../src/style.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 400, ../src/style.scss */
+  /* line 426, ../src/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 401, ../src/style.scss */
+  /* line 427, ../src/style.scss */
   tr, img {
     page-break-inside: avoid;
   }
@@ -1054,13 +1092,13 @@ button {
     margin: 0.5cm;
 }
 
-  /* line 403, ../src/style.scss */
+  /* line 429, ../src/style.scss */
   p, h2, h3, #slide-show .answer p {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 404, ../src/style.scss */
+  /* line 430, ../src/style.scss */
   h2, h3, #slide-show .answer p {
     page-break-after: avoid;
   }
