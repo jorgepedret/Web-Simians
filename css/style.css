@@ -1037,6 +1037,23 @@ button {
   line-height: 1.2em;
 }
 
+/* line 400, ../src/style.scss */
+#tweet {
+  background: url(../img/twitter-post.jpg) no-repeat 662px 0;
+  height: 170px;
+}
+/* line 403, ../src/style.scss */
+#tweet p {
+  font-size: 0.8em;
+  padding: 1px 20px 0 0;
+  margin: 0;
+}
+/* line 408, ../src/style.scss */
+#tweet time {
+  font-size: 0.8em;
+  color: #99aab5;
+}
+
 @media all and (orientation:portrait) {}
 @media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {
@@ -1044,46 +1061,46 @@ button {
 }
 
 @media print {
-  /* line 420, ../src/style.scss */
+  /* line 432, ../src/style.scss */
   * {
     background: transparent !important;
     color: #444 !important;
     text-shadow: none !important;
   }
 
-  /* line 421, ../src/style.scss */
+  /* line 433, ../src/style.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
 
-  /* line 422, ../src/style.scss */
+  /* line 434, ../src/style.scss */
   a:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 423, ../src/style.scss */
+  /* line 435, ../src/style.scss */
   abbr:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 424, ../src/style.scss */
+  /* line 436, ../src/style.scss */
   .ir a:after {
     content: "";
   }
 
-  /* line 425, ../src/style.scss */
+  /* line 437, ../src/style.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 426, ../src/style.scss */
+  /* line 438, ../src/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 427, ../src/style.scss */
+  /* line 439, ../src/style.scss */
   tr, img {
     page-break-inside: avoid;
   }
@@ -1092,13 +1109,13 @@ button {
     margin: 0.5cm;
 }
 
-  /* line 429, ../src/style.scss */
+  /* line 441, ../src/style.scss */
   p, h2, h3, #slide-show .answer p {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 430, ../src/style.scss */
+  /* line 442, ../src/style.scss */
   h2, h3, #slide-show .answer p {
     page-break-after: avoid;
   }
