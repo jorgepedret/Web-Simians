@@ -400,16 +400,17 @@ form {
 #tweet {
 	background: url(../img/twitter-post.jpg) no-repeat 662px 0;
 	height: 170px;
-	p {
-		font-size: 0.8em;
-		padding: 1px 20px 0 0;
-		margin: 0;
+	#twitter_update_list li {
+		list-style: none;
+		padding: 15px 0 0 15px;
+		span {
+			display: block;
+		}
+		a {
+			font-size: 0.8em;
+			color: #99aab5;
+		}
 	}
-	time {
-		font-size: 0.8em;
-		color: #99aab5;
-	}
-	
 }
 
 

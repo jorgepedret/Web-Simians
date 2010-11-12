@@ -1043,13 +1043,16 @@ button {
   height: 170px;
 }
 /* line 403, ../src/style.scss */
-#tweet p {
-  font-size: 0.8em;
-  padding: 1px 20px 0 0;
-  margin: 0;
+#tweet #twitter_update_list li {
+  list-style: none;
+  padding: 15px 0 0 15px;
 }
-/* line 408, ../src/style.scss */
-#tweet time {
+/* line 406, ../src/style.scss */
+#tweet #twitter_update_list li span {
+  display: block;
+}
+/* line 409, ../src/style.scss */
+#tweet #twitter_update_list li a {
   font-size: 0.8em;
   color: #99aab5;
 }
@@ -1061,46 +1064,46 @@ button {
 }
 
 @media print {
-  /* line 432, ../src/style.scss */
+  /* line 433, ../src/style.scss */
   * {
     background: transparent !important;
     color: #444 !important;
     text-shadow: none !important;
   }
 
-  /* line 433, ../src/style.scss */
+  /* line 434, ../src/style.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
 
-  /* line 434, ../src/style.scss */
+  /* line 435, ../src/style.scss */
   a:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 435, ../src/style.scss */
+  /* line 436, ../src/style.scss */
   abbr:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 436, ../src/style.scss */
+  /* line 437, ../src/style.scss */
   .ir a:after {
     content: "";
   }
 
-  /* line 437, ../src/style.scss */
+  /* line 438, ../src/style.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 438, ../src/style.scss */
+  /* line 439, ../src/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 439, ../src/style.scss */
+  /* line 440, ../src/style.scss */
   tr, img {
     page-break-inside: avoid;
   }
@@ -1109,13 +1112,13 @@ button {
     margin: 0.5cm;
 }
 
-  /* line 441, ../src/style.scss */
+  /* line 442, ../src/style.scss */
   p, h2, h3, #slide-show .answer p {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 442, ../src/style.scss */
+  /* line 443, ../src/style.scss */
   h2, h3, #slide-show .answer p {
     page-break-after: avoid;
   }

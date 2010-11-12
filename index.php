@@ -138,10 +138,11 @@
 				</footer>
 			</article>
 		</section>
-		<article id="tweet">
-			<p>Our youthful duty free sale appreciate, wealth roasted, spend jiffy space a is. Roasted luscious feel thin delicious deluxe listen need relaxing find.</p>
-			<time>Posted 2 hours ago</time>
+		<article id="tweet">			
+			<ul id="twitter_update_list"><li></li></ul>
 		</article>
+		<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+		<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/websimians.json?callback=twitterCallback2&amp;count=1"></script>
 	</div>
 </article>
 <footer id="footer">
