@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6 {
 html { overflow-y: scroll; }
 
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color: #ff6a51; }
+a, a:active, a:visited { color: #ff6a51; text-decoration: none}
 a:hover { color: #ee302e; }
 
 ul, ol { margin-left: 1.8em; }
@@ -103,10 +103,14 @@ form {
 }
 .wrap{
 	@include container();
+	overflow: visible;
+}
+#header{
+	@extend .group;
 }
 #branding{
 	@include column(8);
-	@include prepend-top(1em);
+	//@include prepend-top(1em);
 	a{
 		display:block;
 		height:77px;
@@ -159,6 +163,35 @@ form {
 	.answer{
 		p{
 			color:lighten($color,50%);
+			text-shadow:darken(#a0d188,50%) 1px 1px 0px;
+		}
+		.btn{
+			$darker : darken($color,30%);
+			background:rgba($darker,0.5);
+			&:hover{
+				$lighter : darken($color,20%);
+				background:rgba($lighter,0.5);
+			}
+		}
+	}
+}
+@mixin slide2($color){
+	background-color:rgba($color,0.5);
+	.wrap{
+		//$light-color : lighten($color,10%);
+		//background:-moz-radial-gradient(180px 50%, circle, rgba($light-color,0.5), rgba($color,0) 180px);
+	}
+	.question{
+		h3{
+			line-height: 1.3em;
+		}
+	}
+	.answer{
+		p{
+			color:lighten($color,0%);
+			color:darken(desaturate($color,10%),10%);
+			text-shadow:lighten(desaturate($color,50%),60%) 1px 1px 0px;
+			line-height: 1.3em;
 		}
 		.btn{
 			$darker : darken($color,30%);
@@ -176,6 +209,7 @@ form {
 	padding:0;
 	position:relative;
 	height:238px;
+	height: 278px;
 	width:100%;
 	.question{
 		@include prepend(2);
@@ -187,7 +221,7 @@ form {
 		.monkey{
 			float:left;
 			width:147px;
-			margin-left:-30px;
+			margin-left:-10px;
 		}
 		h3{
 			@include column(8);
@@ -215,7 +249,6 @@ form {
 			@extend h3;
 			font-size:1.714em;
 			color:#a0d188;
-			text-shadow:darken(#a0d188,50%) 1px 1px 0px;
 		}
 		small{
 			font-size:60%;
@@ -243,16 +276,17 @@ form {
 		top:0;
 		left:0;
 		width:100%;
+		padding: 20px 0;
 	}
 	#website-features{
-		@include slide(#0c6254);
+		@include slide2(#0c6254);
 	}
 	#website-identity{
-		@include slide(#698959);
+		@include slide2(#0c6254);
 	}
 	#website-performance{
 		display:block;
-		@include slide(#9d201e);
+		@include slide2(#0c6254);
 	}
 	
 }
@@ -293,6 +327,7 @@ form {
 	}
 }
 #footer{
+	@extend .group;
 	border-top:#425f5b solid 5px;
 	background:#1a2031;
 	color:#9abfc5;
@@ -366,11 +401,12 @@ form {
 	@include prepend(1);
 	padding-top:15px;
 }
-
+#featured-projects{
+	background:image-url('safari-guy.png') right 100% no-repeat;
+}
 .project {
-	float: left;
-	margin-right: 55px;
-	width: 280px;
+	@include column(7);
+	@include append(1);
 	h3 {
 		line-height: 1em;
 		margin-bottom: 5px;
@@ -379,37 +415,52 @@ form {
 		margin: 0;
 	}
 	figure {
-		margin-top: 15px;
-		border: 5px solid black;
-		padding: 3px 3px 0;
+		@include column(7,true);
+		margin-top: 18px;
+		border:#999 solid 1px;
+		-moz-box-shadow:lighten(#000,50%) 5px 5px 10px;
+		padding-right: 5px;
+		img{
+			border:#fff solid 5px;
+			margin-bottom: -4px;
+		}
 	}
 }
-
-#blog-entries {
-	margin: 30px 0 0 0;
-	}
-.post {
-	width: 270px;
-	float: left;
-	margin-right: 65px;
+.box{
+	margin: 40px 0;
+}
+#blog-entries{
+	@include column(16);
+}
+.post{
+	@include column(7,true);
+	@include append(1);
 	h3 {
 		line-height: 1.2em;
 	}
 }
 
 #tweet {
-	background: url(../img/twitter-post.jpg) no-repeat 662px 0;
-	height: 170px;
-	#twitter_update_list li {
+	@include column(8,true);
+	background: url(../img/twitter-bird.png) no-repeat right bottom;
+	padding-bottom:132px;
+	margin-top: 50px;
+	#twitter_updates{
+		background: #e3eff6;
+		padding: 10px;
+		-moz-border-radius: 8px;
+	}
+	.meta{
+		display: block;
+		font-size: 0.8em;
+		text-decoration: none;
+		color: darken(#e3eff6,40%);
+		margin-top: 5px;
+	}
+	ul{
 		list-style: none;
-		padding: 15px 0 0 15px;
-		span {
-			display: block;
-		}
-		a {
-			font-size: 0.8em;
-			color: #99aab5;
-		}
+		padding: 0;
+		margin: 0;
 	}
 }
 

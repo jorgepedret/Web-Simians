@@ -46,7 +46,7 @@
 			<div class="wrap">
 				<div class="question">
 					<div class="monkey">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/monkeys-wip.png" alt="Happy Monkey" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/main-monkey.png" alt="Happy Monkey" />
 					</div>
 					<h3><span>Do you know how your website is doing?</span></h3>
 				</div>
@@ -60,7 +60,7 @@
 			<div class="wrap">
 				<div class="question">
 					<div class="monkey">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/hmmm2.png" alt="Monkey handstand talking on phone" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/phone-monkey.png" alt="Monkey handstand talking on phone" />
 					</div>
 					<h3><span>What is your website doing for your business?</span></h3>
 				</div>
@@ -94,7 +94,7 @@
 </section>
 <article id="main">
 	<div class="wrap">
-		<section id="featured-projects" class="group">
+		<section id="featured-projects" class="group box">
 			<h2>Featured Projects</h2>
 			<article class="project">
 				<h3><a href="#">Vehicle Direct</a></h3>
@@ -117,32 +117,44 @@
 				</figure>
 			</article>
 		</section>
-		<section id="blog-entries">
-			<h2>What we're talking about</h2>
-			<article class="post">
-				<header>
-					<h3><a href="#">Objective Oriented Website: The Scientific Method</a></h3>
-				</header>
-				<p>Our youthful duty free sale appreciate, wealth roasted, spend jiffy space a is. Roasted luscious feel thin delicious deluxe listen need relaxing find.</p>
-				<footer>
-					<a href="#">Continue Reading &raquo;</a>
-				</footer>
+		<hr />
+		<section id="updates" class="group box">
+			<section id="blog-entries">
+				<h2>What we're talking about</h2>
+				<article class="post">
+					<header>
+						<h3><a href="#">Objective Oriented Website: The Scientific Method</a></h3>
+					</header>
+					<p>Our youthful duty free sale appreciate, wealth roasted, spend jiffy space a is. Roasted luscious feel thin delicious deluxe listen need relaxing find.</p>
+					<footer>
+						<a href="#">Continue Reading &raquo;</a>
+					</footer>
+				</article>
+				<article class="post">
+					<header>
+						<h3><a href="#">Objective Oriented Website: The Scientific Method</a></h3>
+					</header>
+					<p>Our youthful duty free sale appreciate, wealth roasted, spend jiffy space a is. Roasted luscious feel thin delicious deluxe listen need relaxing find.</p>
+					<footer>
+						<a href="#">Continue Reading &raquo;</a>
+					</footer>
+				</article>
+			</section>
+			<article id="tweet">			
+				<div id="twitter_updates"></div>
 			</article>
-			<article class="post">
-				<header>
-					<h3><a href="#">Objective Oriented Website: The Scientific Method</a></h3>
-				</header>
-				<p>Our youthful duty free sale appreciate, wealth roasted, spend jiffy space a is. Roasted luscious feel thin delicious deluxe listen need relaxing find.</p>
-				<footer>
-					<a href="#">Continue Reading &raquo;</a>
-				</footer>
-			</article>
+			<script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>
+			<script>
+			getTwitters('twitter_updates', { 
+				id: 'websimians', 
+				count: 1, 
+				enableLinks: true, 
+				ignoreReplies: true, 
+				clearContents: true,
+				template: '<span class="tweet">%text%</span><a class="meta" href="http://twitter.com/%user_screen_name%/statuses/%id%/">Sent %time%</a>'
+			});
+			</script>
 		</section>
-		<article id="tweet">			
-			<ul id="twitter_update_list"><li></li></ul>
-		</article>
-		<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-		<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/websimians.json?callback=twitterCallback2&amp;count=1"></script>
 	</div>
 </article>
 <footer id="footer">
@@ -216,9 +228,9 @@ $(function(){
 		if(slide != 'next' && slide != 'prev'){
 			if($('#slide-show li:eq('+slide+')').length > 0){
 				//$('#slide-show li:eq('+slide+')').css('display','block');
-				$('#slide-show li:eq('+slide+')').slideDown();
+				$('#slide-show li:eq('+slide+')').fadeIn();
 				//$('#slide-show li:eq('+current_slide+')').css('display','none');
-				$('#slide-show li:eq('+current_slide+')').slideUp();
+				$('#slide-show li:eq('+current_slide+')').fadeOut();
 				current_slide = slide;
 			}
 		}
